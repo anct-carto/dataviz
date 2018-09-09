@@ -1,0 +1,64 @@
+
+/* Roboto Condensed font*/
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Condensed Bold'),
+         url('../font/robotocondensed-bold-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-bold-webfont.woff') format('woff');
+    unicode-range: U+000-5FF;
+
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Condensed Regular'),
+         url('../font/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-regular-webfont.woff') format('woff');
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Condensed Light'),
+         url('../font/robotocondensed-light-webfont.woff2') format('woff2'),
+         url('../font/robotocondensed-light-webfont.woff') format('woff');
+    unicode-range: U+000-5FF;
+}
+
+
+/*Titillium Web font*/
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Titillium Web Bold'),
+         url('../font/titilliumweb-bold-webfont.woff2') format('woff2'),
+         url('../font/titilliumweb-bold-webfont.woff') format('woff');
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Titillium Web Regular'),
+         url('../font/titilliumweb-regular-webfont.woff2') format('woff2'),
+         url('../font/titilliumweb-regular-webfont.woff') format('woff');
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Titillium Web Light'),
+         url('../font/titilliumweb-light-webfont.woff2') format('woff2'),
+         url('../font/titilliumweb-light-webfont.woff') format('woff');
+    unicode-range: U+000-5FF;
+}
