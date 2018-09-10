@@ -161,8 +161,8 @@
     height: auto;
     background: none repeat scroll 0 0 white;
     border: 0 none;
-    border-radius: 8px 8px 8px 8px;
-    box-shadow: 2.5px 3px 5px #343534;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 2px 2px #343534;
     color: black;
     font: 12px sans-serif;
     padding: 5px;

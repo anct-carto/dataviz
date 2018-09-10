@@ -44,7 +44,7 @@ d3.formatDefaultLocale({
 	"grouping": [3]
 });
 
-let format = d3.format(",.1f");
+
 
 /*DATA, AXIS
 ------------------------------------------------------
@@ -62,6 +62,8 @@ d3.csv("onpv_graph1.csv", function(d){
 }).then(function(data){
 
 	console.log(data);
+	
+	let format = d3.format(",.1f");
 
 	data.columns = ["lieu", "cat1", "cat2", "cat3", "cat4"];
 
@@ -174,7 +176,7 @@ d3.csv("onpv_graph1.csv", function(d){
 ------------------------------------------------------
 */
 
-	const legendText = ["Scolarisé dans une école publique puis dans un collège public","Scolarisé dans une école publique puis dans un collège privé","Scolarisé dans une école privée puis dans un collège public","Scolarisé dans une école privée puis dans un collège privé"];
+	const legendText = ["Scolarisée dans une école publique puis dans un collège public","Scolarisée dans une école publique puis dans un collège privé","Scolarisée dans une école privée puis dans un collège public","Scolarisée dans une école privée puis dans un collège privé"];
 
 	let svgLegend = d3.select(".c_legend")
 		.append("svg")
@@ -237,10 +239,10 @@ d3.csv("onpv_graph1.csv", function(d){
 		.on("mousemove", function(d){
 			popup
 				.style("display","block")
-				.style("left", d3.event.pageX - 50 + "px")
-				.style("top", d3.event.pageY - 80 + "px")
+				.style("left", d3.event.pageX - 20 + "px")
+				.style("top", d3.event.pageY - 50 + "px")
 				.style("text-align", "left");
-			d3.select(this).style("cursor","crosshair");
+			//d3.select(this).style("cursor","crosshair");
 			d3.select(this).style("opacity",0.8);
 
 
@@ -255,7 +257,7 @@ d3.csv("onpv_graph1.csv", function(d){
 		.on("mouseout", function(d){
 			popup
 				.style("display","none");
-			d3.select(this).style("cursor","none");
+			//d3.select(this).style("cursor","none");
 			d3.select(this).style("opacity",1);
 		}); //mouseout
 
@@ -428,15 +430,20 @@ TEST NAVIGATION
 
 
 d3.csv("onpv_graph1.csv", function(d){
+
+	let format = d3.format(",");
+
 	return{
-		"Lieu de résidence": d.lieu_de_residence,
-		"D'école publique vers collège publique": format(+d.pub_pub),
-		"D'école publique vers collège privé": format(+d.pub_priv),
-		"D'école privée vers collège publique": format(+d.priv_pub),
-		"D'école privée vers collège privé": format(+d.priv_priv)
+		"Mouvement entre public / privé": d.lieu_de_residence,
+		"D'une école publique vers un collège publique": format(+d.pub_pub),
+		"D'une école publique vers un collège privé": format(+d.pub_priv),
+		"D'une école privée vers un collège publique": format(+d.priv_pub),
+		"D'une école privée vers un collège privé": format(+d.priv_priv)
 	};
 }).then(function(data){
 	
+	
+
 	let sortAscending = true;
 	let table = d3.select(".c_table").append("table");
 	let titles = d3.keys(data[0]);
@@ -478,7 +485,16 @@ d3.csv("onpv_graph1.csv", function(d){
 		.text(function (d) {
 			return d.value;
 		});
-}); //data
+
+	let nameFirstRow = document.querySelectorAll("[data-th='Lieu de résidence']");
+
+		d3.select(nameFirstRow[0])
+			.text("Nombre d'élèves résidant en quartiers prioritaires")
+
+		d3.select(nameFirstRow[1])
+			.text("Nombre d'élèves résidant hors quartiers prioritaires")
+
+	}); //data
 
 
 
