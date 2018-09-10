@@ -486,7 +486,7 @@ d3.csv("onpv_graph1.csv", function(d){
 			return d.value;
 		});
 
-	let nameFirstRow = document.querySelectorAll("[data-th='Lieu de résidence']");
+	let nameFirstRow = document.querySelectorAll("[data-th='Mouvement entre public / privé']");
 
 		d3.select(nameFirstRow[0])
 			.text("Nombre d'élèves résidant en quartiers prioritaires")
