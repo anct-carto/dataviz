@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ONPV - Graphique 3</title>
+
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+    <link rel="stylesheet" type="text/css" href="onpv_graph3.css">
+
+
+  </head>
+
+  <body>
+
+  
+<div class="c_all">
+  <!--Tab links-->
+  <div class="tab">
+    <button class="tab_links active">Graphique</button>
+    <button class="tab_links">Données</button>
+  </div>
+
+  <!--Tab content-->
+  <div id="tab1" class="tab_content">
+    <div class="c_chart"></div>
+    <div class="c_legend">
+      <p>Part des élèves effectuant un mouvement entre l'enseignement public et l'enseignement privé à l'occasion du passage en 6e sur l'année 2015-2016</p>
+      <p>En %, selon leur âge et leur lieu de résidence</p>
+    </div>
+    <div class="c_source">
+      <p><strong>Source :</strong> MENESR - DEPP <span>&#8729</span> <strong>Réalisation :</strong> CGET, 2018</p>
+    </div>
+  </div>
+
+  <div id="tab2" class="tab_content">
+      <div id="c_legend2" class="c_legend">
+          <p>Nombre d'élèves effectuant un mouvement entre l'enseignement public et l'enseignement privé à l'occasion du passage en 6e sur l'année 2015-2016</p>
+          <p>Selon leur âge et leur lieu de résidence</p>
+        </div>
+          <div class="c_table"></div>
+    <div id="c_source_2" class="c_source">
+      <p><strong>Source :</strong> MENESR - DEPP <span>&#8729</span> <strong>Réalisation :</strong> CGET, 2018</p>
+    </div>
+  </div>
+</div>
+
+    <script type="text/javascript" src="d3.min.js"></script>
+    <script type="text/javascript" src="onpv_graph3.js"></script>
+
+
+  </body>
+</html>

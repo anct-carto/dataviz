@@ -1,0 +1,239 @@
+
+
+/*All devices
+  %%%%   %%%%  %%%%%  %%%%%% %%%%%% %%  %% 
+ %%     %%  %% %%  %% %%     %%     %%% %% 
+  %%%%  %%     %%%%%  %%%%   %%%%   %% %%% 
+     %% %%  %% %%  %% %%     %%     %%  %% 
+  %%%%   %%%%  %%  %% %%%%%% %%%%%% %%  %% 
+...........................................
+*/
+@media all{
+
+  svg{
+    width:100%;
+  }
+
+  /*Button*/
+  button {
+    color: #666;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    padding: 0.5em 0.4em;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-bottom-width: 3px;
+    cursor: pointer;
+    font-family: "Titillium Web";
+  }
+
+
+  /*All*/
+  .c_all{
+    margin-left: 1%;
+    margin-right: 1%;
+    min-width: 320px;
+    max-width: 680px;
+  }
+
+
+  /*Tab*/
+  .tab{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1%;
+  }
+
+  #tab2{
+    display: none;
+  }
+
+
+  /*Chart*/
+  .c_chart{
+    min-width: 320px;
+    max-width:680px;
+  }
+
+
+  .c_chart svg text{
+    font-family: "Titillium Web";
+    font-weight: 400;
+    font-size: 1.3em;
+  }
+
+  .y_axis text{
+    text-anchor: end;
+  }
+
+  /*Legend*/
+  .c_legend{
+    min-width: 320px;
+    max-width: 680px;
+    margin-right: 1%;
+  }
+
+  .c_legend svg text{
+    font-family: "Titillium Web";
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+
+  .c_legend p{
+    font-family: "Titillium Web";
+    margin-top:0;
+  }
+
+
+  .c_legend p:nth-of-type(1){
+    font-weight: 400;
+    font-size: 0.95em;
+    margin-bottom: 0.3em;
+  }
+
+  .c_legend p:nth-of-type(2){
+    font-weight: 300;
+    font-size:0.9em;
+    margin-bottom: 1em;
+  }
+
+  #c_legend2{
+    margin-top: 5%;
+    font-weight: 700;
+  }
+
+
+  /*Source*/
+  .c_source{
+    margin-top:-20px;
+    font-family: "Titillium Web";
+    font-weight: 300;
+    font-size:0.8em;
+    text-align: end;
+    margin-right: 1%;
+  }
+
+  .c_source span{
+    font-size: 0.8em;
+  }
+
+  .c_source strong{
+    font-weight: 400;
+  }
+
+  #c_source_2{
+    margin-top: 5%;
+  }
+
+  }
+
+
+
+  /*Table*/
+  table{
+    margin-top:5%;
+    font-family: "Titillium Web";
+    font-size: 0.85em;
+    text-align: left;
+    border-collapse: collapse;
+  }
+
+  table th{
+    font-weight: 400;
+    padding: 10px 8px;
+    color: rgb(9, 17, 26);
+    border-bottom: 2px solid rgb(9, 17, 26);
+    cursor: pointer;
+  }
+
+  table td{
+    padding: 6px 8px;
+    color: rgb(85, 75, 75);
+    border-bottom: 1px solid rgb(85, 75, 75);
+  }
+
+  table tbody tr:hover td{
+    color: #009;
+  }
+
+
+
+   /*popup*/
+
+   .c_popup {
+    position: absolute;
+    display: none;
+    width: auto;
+    max-width: 17em;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 1px 2px 2px #343534;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    pointer-events: none;
+    font-family: "Titillium Web";
+    font-size: 0.9em;
+  }
+
+  hr{
+    margin-bottom: 8%;
+  }
+
+  .c_popup>div{
+      text-align: left;
+      font-family: "Titillium Web";
+      font-weight: 400;
+      font-size: 0.95em;
+  }
+
+  .c_popup p{
+    margin:0;
+  }
+
+
+
+}
+
+
+
+/*Desktop devices
+ %%%%%  %%%%%%  %%%%  %%  %% %%%%%%  %%%%  %%%%%  
+ %%  %% %%     %%     %% %%    %%   %%  %% %%  %% 
+ %%  %% %%%%    %%%%  %%%%     %%   %%  %% %%%%%  
+ %%  %% %%         %% %% %%    %%   %%  %% %%     
+ %%%%%  %%%%%%  %%%%  %%  %%   %%    %%%%  %%     
+..................................................
+*/
+@media only screen and (min-width:658px){
+
+
+}
+
+
+/*Mobile devices
+ %%   %%  %%%%  %%%%%  %%%%%% %%     %%%%%% 
+ %%% %%% %%  %% %%  %%   %%   %%     %%     
+ %% % %% %%  %% %%%%%    %%   %%     %%%%   
+ %%   %% %%  %% %%  %%   %%   %%     %%     
+ %%   %%  %%%%  %%%%%  %%%%%% %%%%%% %%%%%% 
+ ...........................................
+*/
+
+@media (min-width:418px) and (max-width:658px){
+
+
+
+}
+
+@media only screen and (max-width:418px){
+
+  .c_legend{
+    margin-top:10px;
+  }
+
+
+}
