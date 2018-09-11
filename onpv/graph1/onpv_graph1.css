@@ -63,6 +63,10 @@
     font-size: 1.3em;
   }
 
+  .y_axis text{
+    text-anchor: end;
+  }
+
   /*Legend*/
   .c_legend{
     min-width: 320px;
@@ -233,7 +237,7 @@ hr{
  %%%%%  %%%%%%  %%%%  %%  %%   %%    %%%%  %%     
 ..................................................
 */
-@media only screen and (min-width:576px){
+@media only screen and (min-width:536px){
 
   .c_legend{
     margin-top:-27px;
@@ -250,16 +254,16 @@ hr{
  %%   %%  %%%%  %%%%%  %%%%%% %%%%%% %%%%%% 
  ...........................................
 */
-@media (min-width:484px) and (max-width:576px){
+@media (min-width:446px) and (max-width:536px){
 
   .c_legend{
-    margin-top:-17px;
+    margin-top:-13px;
   }
 
 
 }
 
-@media (min-width:380px)and (max-width:484px){
+@media (min-width:347px)and (max-width:446px){
 
   .c_legend{
     margin-top:-7px;
@@ -268,10 +272,10 @@ hr{
 
 }
 
-@media only screen and (max-width:380px){
+@media only screen and (max-width:347px){
 
   .c_legend{
-    margin-top:0px;
+    margin-top:6px;
   }
 
 

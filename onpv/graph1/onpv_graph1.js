@@ -118,7 +118,7 @@ d3.csv("onpv_graph1.csv", function(d){
 		.attr("transform", `translate(0,${height-margin.bottom})`)
 		.call(customXAxis)
 		.selectAll(".tick text")
-		.call(wrap, x.bandwidth()+50);
+		.call(wrap, x.bandwidth()+50); //text wrap
 
 	svg
 		.append("g")
@@ -218,7 +218,7 @@ d3.csv("onpv_graph1.csv", function(d){
 		});
 	
 
-	/*LEGEND
+	/*POPUP
 ------------------------------------------------------
 ------------------------------------------------------
 */
@@ -278,7 +278,7 @@ d3.csv("onpv_graph1.csv", function(d){
 		g.selectAll(".tick:not(:first-of-type) line")
 			.attr("stroke","#777")
 			.attr("stroke-dasharray", "2,2");
-		g.selectAll(".tick text").attr("x", -30).attr("dy", 3);
+		g.selectAll(".tick text").attr("x", -10).attr("dy", 3);
 			
 	}
 
@@ -431,7 +431,7 @@ TEST NAVIGATION
 
 d3.csv("onpv_graph1.csv", function(d){
 
-	let format = d3.format(",");
+	let format = d3.format(",.3r");
 
 	return{
 		"Mouvement entre public / privé": d.lieu_de_residence,
