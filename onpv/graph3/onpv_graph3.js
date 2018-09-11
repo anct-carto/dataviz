@@ -157,7 +157,7 @@ d3.csv("onpv_graph3_chart.csv", function(d,i,columns){
 	let svgLegend = d3.select(".c_legend")
 		.append("svg")
 		.attr("width","100%")
-		.attr("height",100);
+		.attr("height",60);
 
 
 
