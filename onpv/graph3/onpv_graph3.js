@@ -152,7 +152,7 @@ d3.csv("onpv_graph3_chart.csv", function(d,i,columns){
 ------------------------------------------------------
 */
 
-	const legendText = ["En quartiers prioritaires", "Hors quartiers prioritaires"];
+	const legendText = ["Résidant en quartiers prioritaires", "Résidant en dehors des quartiers prioritaires"];
 
 	let svgLegend = d3.select(".c_legend")
 		.append("svg")
