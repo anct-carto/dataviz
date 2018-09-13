@@ -176,7 +176,7 @@ d3.csv("onpv_graph1.csv", function(d){
 ------------------------------------------------------
 */
 
-	const legendText = ["Scolarisée dans une école publique puis dans un collège public","Scolarisée dans une école publique puis dans un collège privé","Scolarisée dans une école privée puis dans un collège public","Scolarisée dans une école privée puis dans un collège privé"];
+	const legendText = ["Scolarisés dans une école publique puis dans un collège public","Scolarisés dans une école publique puis dans un collège privé","Scolarisés dans une école privée puis dans un collège public","Scolarisés dans une école privée puis dans un collège privé"];
 
 	let svgLegend = d3.select(".c_legend")
 		.append("svg")
