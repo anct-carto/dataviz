@@ -91,7 +91,7 @@ d3.csv("onpv_graph1.csv", function(d){
 
 
 	/*Initiate z Axis*/
-	const color = ["#33b0e6","#e2e8a0","#e73b26","#ece42c"];
+	const color = ["#fbdea2","#f8c355","#77769c","#b4b4c9"];
 
 	const z = d3.scaleOrdinal()
 		.range(color)
