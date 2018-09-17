@@ -215,19 +215,19 @@ hr{
 }
 
 #popup_rect1{
-  background: #fbdea2;
+  background: #b4b4c9;
 }
 
 #popup_rect2{
-  background: #f8c355;
-}
-
-#popup_rect3{
   background: #77769c;
 }
 
+#popup_rect3{
+  background: #f8c355;
+}
+
 #popup_rect4{
-  background: #b4b4c9;
+  background:  #fbdea2;
 }
 
 /*Desktop devices
