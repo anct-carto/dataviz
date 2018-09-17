@@ -87,7 +87,7 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 
 	/* Initiate zAxis */
 	const z = d3.scaleOrdinal()
-		.range(["#e89c3f","#45bfb7"]);
+		.range(["#ba3c51","#fa9150"]);
 
 
 	
@@ -407,7 +407,7 @@ TEST NAVIGATION
 
 d3.csv("onpv_graph2_table.csv", function(d){
 
-	let format = d3.format(",.2r");
+	let format = d3.format(",");
 
 	return{
 		"": d.categorie,
