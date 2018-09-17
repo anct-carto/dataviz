@@ -431,10 +431,10 @@ TEST NAVIGATION
 
 d3.csv("onpv_graph1.csv", function(d){
 
-	let format = d3.format(",.3r");
+	let format = d3.format(",.2r");
 
 	return{
-		"Mouvement entre public / privé": d.lieu_de_residence,
+		"": d.lieu_de_residence,
 		"D'une école publique vers un collège publique": format(+d.pub_pub),
 		"D'une école publique vers un collège privé": format(+d.pub_priv),
 		"D'une école privée vers un collège publique": format(+d.priv_pub),
@@ -488,13 +488,13 @@ d3.csv("onpv_graph1.csv", function(d){
 
 	let nameFirstRow = document.querySelectorAll("[data-th='Mouvement entre public / privé']");
 
-		d3.select(nameFirstRow[0])
-			.text("Nombre d'élèves résidant en quartiers prioritaires")
+	d3.select(nameFirstRow[0])
+		.text("Nombre d'élèves résidant en quartiers prioritaires");
 
-		d3.select(nameFirstRow[1])
-			.text("Nombre d'élèves résidant hors quartiers prioritaires")
+	d3.select(nameFirstRow[1])
+		.text("Nombre d'élèves résidant hors quartiers prioritaires");
 
-	}); //data
+}); //data
 
 
 

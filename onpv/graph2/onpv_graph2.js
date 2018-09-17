@@ -57,16 +57,16 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 
 	console.log(data);
 
-	let format = d3.format(",.1f")
-	let keys = data.columns.slice(1) //delete first columns
-	console.log(keys)
+	let format = d3.format(",.1f");
+	let keys = data.columns.slice(1); //delete first columns
+	console.log(keys);
 
 	/* Initiate xAxis */
 	/*x0 inter-grouped bar chart and x1 intra-grouped bar chart */
 	const x0 = d3.scaleBand()
 		.rangeRound([margin.left, width-margin.right])
 		.paddingInner(0.1)
-		.domain(data.map((d)=> {return d.categorie}))
+		.domain(data.map((d)=> {return d.categorie;}));
 
 	const xAxis = d3.axisBottom(x0)
 		.tickSizeOuter(0);
@@ -74,7 +74,7 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 	const x1 = d3.scaleBand()
 		.padding(0.05)
 		.domain(keys)
-		.rangeRound([0,x0.bandwidth()])
+		.rangeRound([0,x0.bandwidth()]);
 
 	/* Initiate yAxis */
 	const y = d3.scaleLinear()
@@ -83,11 +83,11 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 
 	const yAxis = d3.axisRight(y)
 		.tickSize(width)
-		.tickFormat((d)=>{return d+"%"}); //add unit
+		.tickFormat((d)=>{return d+"%";}); //add unit
 
 	/* Initiate zAxis */
 	const z = d3.scaleOrdinal()
-		.range(["#e89c3f","#45bfb7"])
+		.range(["#e89c3f","#45bfb7"]);
 
 
 	
@@ -113,17 +113,17 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 		.attr("class","axis y_axis")
 		.attr("transform",`translate(${margin.left},0)`)
 		.call(yAxis)
-		.select(".domain").remove()
+		.select(".domain").remove();
 
 	svg.select(".y_axis")
 		.selectAll(".tick:not(:first-of-type) line")
 		.attr("stroke","#777")
-		.attr("stroke-dasharray", "2,2")
+		.attr("stroke-dasharray", "2,2");
 
 	svg.select(".y_axis")
 		.selectAll("text")
 		.attr("x",-10)
-		.attr("dy",3)
+		.attr("dy",3);
 			
 
 	
@@ -144,10 +144,10 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 		.attr("y", function(d) { return y(d.value); })
 		.attr("width", x1.bandwidth())
 		.attr("height", function(d) { return height-margin.bottom - y(d.value); })
-		.attr("fill", function(d) { return z(d.key); })
+		.attr("fill", function(d) { return z(d.key); });
 
 
-			/*LEGEND
+	/*LEGEND
 ------------------------------------------------------
 ------------------------------------------------------
 */
@@ -191,8 +191,7 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 		.attr("dy", "0.5em")
 		.text(function(d,i){
 			return legendText[i];
-		});
-				 
+		});	 
 
 
 	/*POPUP
@@ -200,32 +199,32 @@ d3.csv("onpv_graph2_chart.csv", function(d,i,columns){
 ------------------------------------------------------
 */
 
-let popup = d3.select("body")
-	.append("div")
-	.attr("class", "c_popup");
+	let popup = d3.select("body")
+		.append("div")
+		.attr("class", "c_popup");
 
-svg.selectAll("rect")
-	.on("mousemove", function(d){
-		popup
-			.style("display","block")
-			.style("left", d3.event.pageX - 20 + "px")
-			.style("top", d3.event.pageY - 40 + "px")
-			.style("text-align", "left");
-		//d3.select(this).style("cursor","crosshair");
-		d3.select(this).style("opacity",0.8);
+	svg.selectAll("rect")
+		.on("mousemove", function(d){
+			popup
+				.style("display","block")
+				.style("left", d3.event.pageX - 20 + "px")
+				.style("top", d3.event.pageY - 40 + "px")
+				.style("text-align", "left");
+			//d3.select(this).style("cursor","crosshair");
+			d3.select(this).style("opacity",0.8);
 
 
 
-		popup
-			.html(`<div><p></p>${format(d.value)} %</div>`);
+			popup
+				.html(`<div><p></p>${format(d.value)} %</div>`);
 
-	}) //mousemove
-	.on("mouseout", function(d){
-		popup
-			.style("display","none");
-		//d3.select(this).style("cursor","none");
-		d3.select(this).style("opacity",1);
-	}); //mouseout
+		}) //mousemove
+		.on("mouseout", function(d){
+			popup
+				.style("display","none");
+			//d3.select(this).style("cursor","none");
+			d3.select(this).style("opacity",1);
+		}); //mouseout
 
 
 
@@ -254,30 +253,30 @@ svg.selectAll("rect")
 		});
 
 
-		/*Wrap Long Label*/
-		function wrap(text, width) {
-			text.each(function() {
-				let text = d3.select(this),
-					words = text.text().split(/\s+/).reverse(),
-					word,
-					line = [],
-					lineNumber = 0,
-					lineHeight = 1.1, // ems
-					y = text.attr("y"),
-					dy = parseFloat(text.attr("dy")),
-					tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-				while (word = words.pop()) {
-					line.push(word);
+	/*Wrap Long Label*/
+	function wrap(text, width) {
+		text.each(function() {
+			let text = d3.select(this),
+				words = text.text().split(/\s+/).reverse(),
+				word,
+				line = [],
+				lineNumber = 0,
+				lineHeight = 1.1, // ems
+				y = text.attr("y"),
+				dy = parseFloat(text.attr("dy")),
+				tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+			while (word = words.pop()) {
+				line.push(word);
+				tspan.text(line.join(" "));
+				if (tspan.node().getComputedTextLength() > width) {
+					line.pop();
 					tspan.text(line.join(" "));
-					if (tspan.node().getComputedTextLength() > width) {
-						line.pop();
-						tspan.text(line.join(" "));
-						line = [word];
-						tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-					}
+					line = [word];
+					tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
 				}
-			});
-		}
+			}
+		});
+	}
 
 
 	/*Resize SVG*/
@@ -290,10 +289,10 @@ svg.selectAll("rect")
 		/*Resize chart*/
 		x0.range([margin.left, width-margin.right]);
 		x0.rangeRound([margin.left, width-margin.right]);
-		x1.rangeRound([0,x0.bandwidth()])
+		x1.rangeRound([0,x0.bandwidth()]);
 
 		svg.selectAll(".gbar")
-        	.attr("transform", function(d) { return "translate(" + x0(d.categorie) + ",0)"; });
+			.attr("transform", function(d) { return "translate(" + x0(d.categorie) + ",0)"; });
 
 		yAxis.tickSize(width);
 
@@ -340,63 +339,63 @@ svg.selectAll("rect")
 	/*
 TEST NAVIGATION
 */
-console.log("Largueur Window : " + window.innerWidth);
+	console.log("Largueur Window : " + window.innerWidth);
 
-const tabLinks = document.querySelectorAll(".tab_links");
+	const tabLinks = document.querySelectorAll(".tab_links");
 
 
 
-Array.from(tabLinks).forEach((el,i)=>{
-	el.addEventListener("click", function(){
-		switch (i) {
-		case 0:
-			openTab(0,1);
-			styleButton(0,1);
-			resize();
-			break;
-		case 1:
-			openTab(1,0);
-			styleButton(1,0);
-			break;
-		}
+	Array.from(tabLinks).forEach((el,i)=>{
+		el.addEventListener("click", function(){
+			switch (i) {
+			case 0:
+				openTab(0,1);
+				styleButton(0,1);
+				resize();
+				break;
+			case 1:
+				openTab(1,0);
+				styleButton(1,0);
+				break;
+			}
+		});
 	});
-});
 
 
 
-Array.from(tabLinks).forEach((el,i)=>{
-	el.addEventListener("mouseover",function(){
+	Array.from(tabLinks).forEach((el,i)=>{
+		el.addEventListener("mouseover",function(){
+			tabLinks[i].style.color = "#333";
+		});
+	});
+
+	Array.from(tabLinks).forEach((el,i)=>{
+		el.addEventListener("mouseout",function(){
+			tabLinks[i].style.color = "#666";
+		});
+	});
+
+
+	function openTab(i,j){
+		document.querySelectorAll(".tab_content")[i].style.display = "block";
+		document.querySelectorAll(".tab_content")[j].style.display = "none";
+	}
+
+	function styleButton(i,j){
+		tabLinks[i].style.backgroundColor = "#eee";
+		tabLinks[j].style.backgroundColor = "#fff";
 		tabLinks[i].style.color = "#333";
-	});
-});
-
-Array.from(tabLinks).forEach((el,i)=>{
-	el.addEventListener("mouseout",function(){
-		tabLinks[i].style.color = "#666";
-	});
-});
+		tabLinks[j].style.color = "#666";
+		tabLinks[i].style.borderBottomWidth = "1px";
+		tabLinks[j].style.borderBottomWidth = "3px";
+	}
 
 
-function openTab(i,j){
-	document.querySelectorAll(".tab_content")[i].style.display = "block";
-	document.querySelectorAll(".tab_content")[j].style.display = "none";
-}
-
-function styleButton(i,j){
-	tabLinks[i].style.backgroundColor = "#eee";
-	tabLinks[j].style.backgroundColor = "#fff";
-	tabLinks[i].style.color = "#333";
-	tabLinks[j].style.color = "#666";
-	tabLinks[i].style.borderBottomWidth = "1px";
-	tabLinks[j].style.borderBottomWidth = "3px";
-}
+	tabLinks[0].style.backgroundColor = "#eee";
+	tabLinks[0].style.borderBottomWidth = "1px";
 
 
-tabLinks[0].style.backgroundColor = "#eee";
-tabLinks[0].style.borderBottomWidth = "1px";
-
-
-	}); //data
+}); //data
 
 
 
@@ -408,10 +407,10 @@ tabLinks[0].style.borderBottomWidth = "1px";
 
 d3.csv("onpv_graph2_table.csv", function(d){
 
-	let format = d3.format(",.3r");
+	let format = d3.format(",.2r");
 
 	return{
-		"Catégories sociales": d.categorie,
+		"": d.categorie,
 		"Quartiers prioritaires": format(+d.qpv),
 		"Hors quartiers prioritaires": format(+d.h_qpv)
 	};
@@ -463,7 +462,7 @@ d3.csv("onpv_graph2_table.csv", function(d){
 
 
 
-	}); //data
+}); //data
 
 /*
 Développeur : B.Miroux
