@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>center map</title>
+
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+    <link rel="stylesheet" type="text/css" href="carto3.css">
+
+
+  </head>
+
+  <body>
+    <div class="c_all">
+      <div class="c_1">
+        <p>Utilisation de <em>projection</em>.<b>fitSize</b><em>(size, object)</em>
+          <br>
+          Méthode pratique pour <em>projection</em>.<b>fitExtent</b> où le coin supérieur gauche de l'étendue du conteneur est [0,0].
+          </p>
+          <p>Les deux lignes suivantes sont équivalentes :</p>
+          <div class="c_code">
+            <blockquote>
+              <pre>   
+<code>projection.fitExtent([[0,0], [width, height]], object);
+projection.fitSize([width, height], object);</code>
+              </pre>
+            </blockquote>
+          </div>
+          <p><u>Code</u></p>
+          <div class="c_code">
+            <blockquote>
+              <pre>
+                <code>
+const projection1 = projection
+.fitSize([width,height],featureCollection);</code>
+              </pre>
+            </blockquote>
+          </div>
+        <div class="c_map c_map1"></div>
+      </div>
+
+
+
+      <div class="c_2">
+        <p>Utilisation de <em>projection</em>.<b>center</b><em>([center])</em>
+          <br><em>center</em> retourne le centre de projection, spécifié par la longitude et la latitude en degré. Si <em>center</em> n'est pas spécifié, retourne le centre (0,0).
+        <br><br>
+          Utilisation de <em>projection</em>.<b>scale</b><em>([scale])</em> et
+          <br><em>scale</em> retourne le facteur d'échelle de projection avec une valeur spécifique. Si <em>scale</em> n'est pas spécifié, retourne l'échelle de la projection spécifique.
+        <br><br>
+         Utilisation de <em>projection</em>.<b>translate</b><em>([translate])</em>
+      <br><em>translate</em> retourne la translation de la projection dans le conteneur. Si <em>translate</em> n'est pas spécifié, retourne la courante translation à [480,250] pour une surface de 960 par 500.
+          <p><u>Code</u></p>
+          <div class="c_code">
+            <blockquote>
+              <pre>
+<code>
+const b = topojson.bbox(carto);
+
+const projection2 = projection
+.center([(b[0]+b[2])/2, (b[1]+b[3])/2])
+.scale(2550)
+.translate([width/2, height/2]); //centrer dans le conteneur</code>
+              </pre>
+            </blockquote>
+          </div>
+      </p>
+        <br>
+      <div class="c_map c_map2"></div>
+     </div>
+
+     <div class="c_3">
+       <p>Utilisation de <em>path</em>.<b>bounds</b><em>(object)</em>
+      <br>Retourne le bounding box projeté (en pixel) pour l'object Geojson spécifié.
+      <br>0,95 correspond à 5% de marge.
+      <p><u>Code</u></p>
+      <div class="c_code">
+          <blockquote>
+            <pre>
+<code>
+projection
+.scale(1)
+.translate([0,0]);
+
+let c = path3.bounds(featureCollection),
+scale = 0.95 / Math.max((c[1][0] - c[0][0]) / width, (c[1][1] - c[0][1]) / height),
+translate = [(width - scale * (c[1][0] + c[0][0])) / 2, (height - scale * (c[1][1] + c[0][1])) / 2];
+
+projection
+.scale(scale)
+.translate(translate);</code>
+            </pre>
+          </blockquote>
+        </div>
+      </p>
+     <div class="c_map c_map3"></div>
+    </div>
+     </div>
+
+
+
+
+    </div>
+
+
+
+
+
+  <script type="text/javascript" src="../d3.min.js"></script>
+  <script type="text/javascript" src="../topojson.min.js"></script>
+  <script type="text/javascript" src="carto3.js"></script>
+  </body>
+</html>

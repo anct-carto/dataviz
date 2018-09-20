@@ -1,0 +1,20 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-4.109586292207174,45.34874039792133]},"properties":{"id_reg":"01","pop":400186,"nom_reg":"Guadeloupe","nom_regM":"GUADELOUPE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-3.6461400113540594,44.078923243091715]},"properties":{"id_reg":"02","pop":383911,"nom_reg":"Martinique","nom_regM":"MARTINIQUE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.9371780607410556,42.41479578259872]},"properties":{"id_reg":"03","pop":252338,"nom_reg":"Guyane","nom_regM":"GUYANE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.2968323064389424,44.55557756651385]},"properties":{"id_reg":"04","pop":842767,"nom_reg":"Réunion","nom_regM":"RÉUNION"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.1632619886613305,45.54411584906293]},"properties":{"id_reg":"06","pop":212645,"nom_reg":"Mayotte","nom_regM":"MAYOTTE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[2.504526202000288,48.709231565916454]},"properties":{"id_reg":"11","pop":12027565,"nom_reg":"Île-de-France","nom_regM":"ÎLE-DE-FRANCE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[1.685280746358711,47.48082640414766]},"properties":{"id_reg":"24","pop":2577435,"nom_reg":"Centre-Val de Loire","nom_regM":"CENTRE-VAL DE LOIRE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[4.809125003616648,47.23527819326242]},"properties":{"id_reg":"27","pop":2820623,"nom_reg":"Bourgogne et Franche-Comté","nom_regM":"BOURGOGNE ET FRANCHE-COMTÉ"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[0.10681009668248961,49.12137752695773]},"properties":{"id_reg":"28","pop":3335645,"nom_reg":"Normandie","nom_regM":"NORMANDIE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[2.7749904999377315,49.96672432403378]},"properties":{"id_reg":"32","pop":6006107,"nom_reg":"Hauts-de-France","nom_regM":"HAUTS-DE-FRANCE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[5.618990541006866,48.68969386493246]},"properties":{"id_reg":"44","pop":5554694,"nom_reg":"Grand Est","nom_regM":"GRAND EST"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-0.8249955347326106,47.47490977217919]},"properties":{"id_reg":"52","pop":3690659,"nom_reg":"Pays de la Loire","nom_regM":"PAYS DE LA LOIRE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-2.8386975855846814,48.18035574622998]},"properties":{"id_reg":"53","pop":3276543,"nom_reg":"Bretagne","nom_regM":"BRETAGNE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[0.19696397163646867,45.190981356351614]},"properties":{"id_reg":"75","pop":5879144,"nom_reg":"Nouvelle Aquitaine","nom_regM":"NOUVELLE AQUITAINE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[2.1366640237024423,43.701816142380494]},"properties":{"id_reg":"76","pop":5730753,"nom_reg":"Occitanie","nom_regM":"OCCITANIE"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[4.538287574346189,45.51575378631736]},"properties":{"id_reg":"84","pop":7820966,"nom_reg":"Auvergne et Rhône-Alpes","nom_regM":"AUVERGNE ET RHÔNE-ALPES"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[6.057795832447347,43.95728457916419]},"properties":{"id_reg":"93","pop":4983438,"nom_reg":"Provence-Alpes-Côte d'Azur","nom_regM":"PROVENCE-ALPES-CÔTE D'AZUR"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[9.105473586735085,42.149516967330094]},"properties":{"id_reg":"94","pop":324212,"nom_reg":"Corse","nom_regM":"CORSE"}}
+]}

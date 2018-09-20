@@ -1,0 +1,25 @@
+*{
+    font-size: 100%;
+    font-family: "Titillium Web";
+}
+
+html{
+    margin-left: 1%;
+}
+
+.c_map{
+    width:680px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.region{
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke:#fff;
+}
+
+.ze{
+    stroke-opacity: 1;
+    fill:#878787;
+}

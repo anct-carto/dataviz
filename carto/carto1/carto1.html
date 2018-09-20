@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>geojson vs topojson</title>
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+    <link rel="stylesheet" type="text/css" href="carto1.css">
+
+
+  </head>
+
+  <body>
+
+    <div class="c_all">
+      <div class="c_1">
+        <p><u>Cas avec un fichier Geojson.</u>
+          <br><br>
+          Le fichier pèse <b>3889Ko</b>.
+          <br>
+          En moyenne, le chargement du fichier est de  <b><span>&nbsp;</span></b> et le rendu de <b><span>&nbsp;</span></b>.
+        </p>
+        <br><br> 
+      <div class="c_map_geojson"></div>
+      </div>
+      <div class="c_2">
+        <p><u>Cas avec un fichier Topojson.</u>
+          <br><br>
+          Le fichier pèse <b>60Ko</b>.
+          <br>
+          En moyenne, le chargement du fichier est de  <b><span>&nbsp;</span></b> et le rendu de <b><span>&nbsp;</span></b>.
+        </p>
+        <br><br>
+        <div class="c_map_topojson"></div>
+      </div>
+   </div>
+
+
+  <script type="text/javascript" src="../d3.min.js"></script>
+  <script type="text/javascript" src="../topojson.min.js"></script>
+  <script type="text/javascript" src="carto1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+*{
+    font-size: 100%;
+    font-family: "Titillium Web";
+}
+
+p{
+    margin:1%;
+}
+
+blockquote{
+    color:darkblue;
+}
+
+.c_code{
+    background-color: #e8e8e8;
+}

@@ -1,0 +1,32 @@
+*{
+    font-size: 100%;
+    font-family: "Titillium Web";
+}
+
+p{
+    margin-left: 1%;
+}
+
+.c_map{
+    width:640px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+blockquote{
+    color:darkblue;
+}
+
+.c_code{
+    background-color: #e8e8e8;
+}
+
+.c_all{
+    display: flex;
+    flex-direction: column;
+}
+
+.c_1, .c_2, .c_3{
+
+    margin:1%;
+}

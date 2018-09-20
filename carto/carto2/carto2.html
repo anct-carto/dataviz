@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>d3 promise multiple files</title>
+
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-bold-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-regular-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../../font/titilliumweb-light-webfont.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font.css">
+    <link rel="stylesheet" type="text/css" href="carto2.css">
+
+
+  </head>
+
+  <body>
+    
+    <p><u>Utilisation des promesses</u>
+      <br><br>
+    L'objet <b>Promise</b> est une promesse qui représente la complétion ou l'échec d'une opération asynchrone.
+    <br>
+    Une promesse représente une valeur qui peut être disponible maintenant, dans le futur voire jamais.
+    <br><br>
+    La méthode <b>Promise.all()</b> renvoie une promesse <em>Promise</em> qui est résolue lorsque l'ensemble des promesses contenues dans un itérable ont été résolues.</p>
+    <div class="c_code">
+        <blockquote>
+          <pre>   
+<code>Promise.all(iterable);</code>
+          </pre>
+       </blockquote>
+    </div>
+    <p>La méthode <b>then()</b> renvoie un objet <em>Promise</em> et peut prendre jusqu'à deux arguments qui sont deux fonctions callback (resolve, reject).
+    <br>
+    Promise est automatiquement rejeté dans d3.
+  </p>
+  <p><u>Code</u></p>
+    <div class="c_code">
+      <blockquote>
+        <pre>
+          <code>
+const promise1 = d3.json("reg2016.json");
+const promise2 = d3.csv("data.csv");
+
+Promise.all([promise1, promise2]).then(function(carto){
+
+  console.log(carto); //promise1 + promise2
+
+  console.log(carto[0]); //promise1
+  console.log(carto[1]); //promise2
+});</code>
+        </pre>
+     </blockquote>
+    </div>
+
+    <div class="c_map"></div>
+
+  <script type="text/javascript" src="../d3.min.js"></script>
+  <script type="text/javascript" src="../topojson.min.js"></script>
+  <script type="text/javascript" src="carto2.js"></script>
+  </body>
+</html>
