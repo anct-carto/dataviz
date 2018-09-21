@@ -351,11 +351,7 @@ d3.csv("onpv_graph1.csv", function(d){
 			.selectAll("text")
 			.attr("y",width);
 
-		if (width < 420){
-			console.log("< à 420px");
-		} else {
-			console.log("> 420px");
-		}
+
 
 	}
 
@@ -498,6 +494,27 @@ d3.csv("onpv_graph1.csv", function(d){
 
 
 
-/*
-Développeur : B.Miroux
+
+/*RESPONSIVE IFRAME
+------------------------------------------------------
+------------------------------------------------------
 */
+
+let documentHeight = document.getElementsByClassName("main-element")[0].scrollHeight; // Get height of the main element in the iframe document
+let message = "documentHeight:"+documentHeight; // Add some unique identifier to the string being passed
+
+parent.postMessage(message,"*"); // Pass message to (any*) parent document
+
+// On resize of the window, recalculate the height of the main element, and pass to the parent document again
+window.onresize = function() {
+	let newDocumentHeight = document.getElementsByClassName("main-element")[0].scrollHeight;
+	let heightDiff = documentHeight - newDocumentHeight;
+
+	// If difference between current height and new height is more than 10px
+	if ( heightDiff > 10 | heightDiff < -10 ) {
+		documentHeight = newDocumentHeight;
+		message = "documentHeight:"+documentHeight;
+		parent.postMessage(message,"*");
+	}
+	
+} ;

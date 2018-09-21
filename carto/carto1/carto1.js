@@ -142,9 +142,9 @@ d3.json("reg2016.json").then(function(carto){
 
 
 	/*PATH TOPOJSON
-------------------------------------------------------
-------------------------------------------------------
-*/
+	------------------------------------------------------
+	------------------------------------------------------
+	*/
 
 	console.time("render_topojson");
 	let startRenderTopojson = (new Date).getTime();
@@ -166,3 +166,4 @@ d3.json("reg2016.json").then(function(carto){
 	timeTopo[1].innerHTML = diffRenderTopojson + " ms";
 
 });
+

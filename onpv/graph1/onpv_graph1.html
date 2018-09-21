@@ -23,38 +23,39 @@
 
   <body>
 
-  
-<div class="c_all">
-  <!--Tab links-->
-  <div class="tab">
-    <button class="tab_links active">Graphique</button>
-    <button class="tab_links">Données</button>
-  </div>
+  <main class="main-element">
+    <div class="c_all">
+      <!--Tab links-->
+      <div class="tab">
+        <button class="tab_links active">Graphique</button>
+        <button class="tab_links">Données</button>
+      </div>
 
-  <!--Tab content-->
-  <div id="tab1" class="tab_content">
-      <div class="c_legend_text">
-          <p>Mouvements des élèves entre l'enseignement public et l'enseignement privé à l'occasion du passage en 6<sup>e</sup> selon leur lieu de résidence (QP ou hors QP)</p>
-          <p>En %, scolarisés dans un collège en fin d'année scolaire 2015-2016</p>
+      <!--Tab content-->
+      <div id="tab1" class="tab_content">
+          <div class="c_legend_text">
+              <p>Mouvements des élèves entre l'enseignement public et l'enseignement privé à l'occasion du passage en 6<sup>e</sup> selon leur lieu de résidence (QP ou hors QP)</p>
+              <p>En %, scolarisés dans un collège en fin d'année scolaire 2015-2016</p>
+            </div>
+        <div class="c_chart"></div>
+        <div class="c_legend"></div>
+        <div class="c_source">
+          <p><strong>Source :</strong> MENESR - DEPP <span>&#8729</span> <strong>Réalisation :</strong> CGET, 2018</p>
         </div>
-    <div class="c_chart"></div>
-    <div class="c_legend"></div>
-    <div class="c_source">
-      <p><strong>Source :</strong> MENESR - DEPP <span>&#8729</span> <strong>Réalisation :</strong> CGET, 2018</p>
-    </div>
-  </div>
+      </div>
 
-  <div id="tab2" class="tab_content">
-      <div id="c_legend2" class="c_legend_text">
-          <p>Mouvements des élèves entre l'enseignement public et l'enseignement privé à l'occasion du passage en 6<sup>e</sup> selon leur lieu de résidence (QP ou hors QP)</p>
-          <p>En effectif, scolarisés dans un collège en fin d'année scolaire 2015-2016</p>
+      <div id="tab2" class="tab_content">
+          <div id="c_legend2" class="c_legend_text">
+              <p>Mouvements des élèves entre l'enseignement public et l'enseignement privé à l'occasion du passage en 6<sup>e</sup> selon leur lieu de résidence (QP ou hors QP)</p>
+              <p>En effectif, scolarisés dans un collège en fin d'année scolaire 2015-2016</p>
+            </div>
+              <div class="c_table"></div>
+        <div id="c_source_2" class="c_source">
+          <p><strong>Source :</strong> MENESR - DEPP <span>&#8729</span> <strong>Réalisation :</strong> CGET, 2018</p>
         </div>
-          <div class="c_table"></div>
-    <div id="c_source_2" class="c_source">
-      <p><strong>Source :</strong> MENESR - DEPP <span>&#8729</span> <strong>Réalisation :</strong> CGET, 2018</p>
+      </div>
     </div>
-  </div>
-</div>
+  </main>
 
     <script type="text/javascript" src="d3.min.js"></script>
     <script type="text/javascript" src="onpv_graph1.js"></script>

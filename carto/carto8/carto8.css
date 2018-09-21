@@ -1,0 +1,73 @@
+
+/*IFRAME
+-------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ */
+
+
+
+
+iframe{
+    width: 100%;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+/*AUTRES
+-------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ */
+
+
+.container{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container::before{
+    content:"";
+    display: table;
+}
+
+.row{
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+.row::before{
+    content:"";
+    display:table;
+}
+
+section{
+    width:75%;
+}
+
+.region{
+    margin-top:15px;
+}
+
+
+@media (min-width:1200px){
+
+    .container{
+        width:1170px;
+    }
+}
+
+@media (min-width:992px){
+
+    .container{
+        width:970px;
+    }
+}
+
