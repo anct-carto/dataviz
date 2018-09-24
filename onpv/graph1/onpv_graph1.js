@@ -499,7 +499,7 @@ d3.csv("onpv_graph1.csv", function(d){
 ------------------------------------------------------
 ------------------------------------------------------
 */
-window.addEventListener("load", function(){
+parent.window.addEventListener("load", function(){
 	let documentHeight = document.getElementsByClassName("main-element")[0].scrollHeight; // Get height of the main element in the iframe document
 	let message = "documentHeight:"+documentHeight; // Add some unique identifier to the string being passed
 
