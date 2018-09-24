@@ -59,7 +59,6 @@ d3.csv("onpv_graph3_chart.csv", function(d,i,columns){
 
 	let format = d3.format(",.1f");
 	let keys = data.columns.slice(1); //delete first columns
-	console.log(keys);
 
 	/* Initiate xAxis */
 	/*x0 inter-grouped bar chart and x1 intra-grouped bar chart */
@@ -464,7 +463,7 @@ d3.csv("onpv_graph3_table.csv", function(d){
 ------------------------------------------------------
 ------------------------------------------------------
 */
-
+/*
 let documentHeight = document.getElementsByClassName("main-element")[0].scrollHeight; // Get height of the main element in the iframe document
 let message = "documentHeight:"+documentHeight; // Add some unique identifier to the string being passed
 
@@ -483,3 +482,4 @@ window.onresize = function() {
 	}
 	
 } ;
+*/

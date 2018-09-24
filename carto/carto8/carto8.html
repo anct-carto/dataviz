@@ -40,12 +40,12 @@
 
     <script>
 
-      let eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+      let eventMethod = window.addEventListener ? "addEventListener" : "attachEvent"; //addEventListerner or attachEvent
       let eventer = window[eventMethod];
-      let messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+      let messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message"; //onmessage or message
 
       eventer(messageEvent,function(e) {
-
+        console.log(e.origin)
         if (  (typeof e.data === "string") && (e.data.indexOf("documentHeight") > -1) ) {
 
           let height = e.data.split('documentHeight:')[1]
