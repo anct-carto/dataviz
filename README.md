@@ -5,6 +5,6 @@ https://cget-carto.github.io/dataviz/
 
 
 La page se compose de deux parties :
-* les _dataviz de l'ONPV_
-* un _tuto_ sur l'utilisation de d3
+* les _dataviz_ de l'ONPV
+* un _tuto_ pas à pas d'exemple de d3
 
